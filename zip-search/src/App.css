@@ -9,3 +9,12 @@
   border: 1px solid black;
   margin: 5% 0%;
 }
+
+.results {
+  padding-top: 1%;
+}
+
+.cardHeader {
+  background-color: lightgray;
+  padding-left: 3%;
+}

@@ -4,7 +4,7 @@ function City({ City, State, Lat, Long, EstimatedPopulation, TotalWages }) {
     return (
       <div className="card">
         <div className="cardHeader">
-          <h2> {`${City}, ${State}`} </h2>
+          <h4> {`${City}, ${State}`} </h4>
         </div>
         <div>
           <ul>

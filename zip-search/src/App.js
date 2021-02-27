@@ -49,7 +49,7 @@ class App extends React.Component {
           </div>
         </div>
 
-        <div className="row justify-content-center">
+        <div className="row justify-content-center results">
           <div className="col-4">
             <ZipSearchField zipChanged={(e) => this.zipChanged(e)} />
             {this.state.cities}
