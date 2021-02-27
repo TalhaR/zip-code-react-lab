@@ -20,11 +20,20 @@ class App extends React.Component {
   };
 
   zipChanged = (e) => {
+    // Only search 5 character inputs that are numbers
+    const nums = /^[0-9]+$/;
     if (e.target.value.length !== 5) { return }
+    if (!e.target.value.match(nums)) { 
+      this.setState({
+        cities: ['No Results']
+      });
+      return;
+    }
 
     fetch('http://ctp-zip-api.herokuapp.com/zip/' + e.target.value)
       .then((res) => res.json())
       .then((res) => {
+        console.log(res)
         this.setState({
           cities: this.getCitiesList(res),
         });
